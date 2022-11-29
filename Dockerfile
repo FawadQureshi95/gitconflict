@@ -1,2 +1,2 @@
 from centos
-CMD["echo", "I am free"]
+CMD ["echo", "I am free"]
