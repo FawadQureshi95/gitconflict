@@ -50,7 +50,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./Dockerfileew
+          file: ./Dockerfile
           push: true
           #tags: ${{ secrets.DOCKER_HUB_USERNAME }}/kalsym:2.2
           tags: ${{ steps.meta.outputs.tags }}
