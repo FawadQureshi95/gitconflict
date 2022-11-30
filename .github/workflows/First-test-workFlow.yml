@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latessasast
+    runs-on: ubuntu-latest
     steps:
       -
         name: Checkout
@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./Dockerfile
+          file: ./Dockerfileewew
           push: true
           #tags: ${{ secrets.DOCKER_HUB_USERNAME }}/kalsym:2.2
           tags: ${{ steps.meta.outputs.tags }}
