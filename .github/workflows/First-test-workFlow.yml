@@ -19,7 +19,7 @@ jobs:
           SLACK_CHANNEL: general
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
           SLACK_ICON: https://github.com/rtCamp.png?size=48
-          SLACK_MESSAGE: 'Post Content :rocket:'
+          SLACK_MESSAGE: 'Your Status of the Workflow is  ${{ job.status }}'
           SLACK_TITLE: Post Title
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
       -
@@ -48,7 +48,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: ./Dockerfileewew
+          file: ./Dockerfile
           push: true
           #tags: ${{ secrets.DOCKER_HUB_USERNAME }}/kalsym:2.2
           tags: ${{ steps.meta.outputs.tags }}
